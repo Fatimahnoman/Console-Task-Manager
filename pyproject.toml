@@ -1,0 +1,20 @@
+[project]
+name = "console-task-manager"
+version = "1.0.0"
+description = "A console-based task management application"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+task-manager = "src.main:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
